@@ -1,3 +1,11 @@
+---
+layout: post
+title: python网络编程
+date: 2018-02-15
+tags: Python
+---
+
+
 # python网络编程
 
 ## 客户端编写
@@ -20,7 +28,7 @@ sk =socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 ```python
 sk.connect(("www.sina.com",80))
-sk.send(b'GET / HTTP/1.1\r\nHost: 
+sk.send(b'GET / HTTP/1.1\r\nHost:
         www.sina.cn\r\nConnection: close\r\n\r\n')
 ```
 
@@ -35,7 +43,7 @@ while True:
         data.append(tempData)
     else:
         break
-        
+
  datStr = (b''.join(data)).decode("utf-8")
 ```
 
@@ -74,8 +82,8 @@ while True:
 	data = clientSocket.recv(1024)
     print("收到" + str(clientSocket) + "的数据")
     data.decode("UTF-8")
-    
-    
+
+
 ```
 
 ### client端
@@ -92,8 +100,3 @@ while True:
     info = client.recv(1024)
     print("server say", info)
 ```
-
-
-
-
-
