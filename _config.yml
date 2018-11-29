@@ -1,11 +1,11 @@
 # Basic
-title: Mr.RuAn
-subtitle: 个人站
-description: Welcome to my blog~
+title: Mr.ripperH
+subtitle: 个人空间
+description: Welcome to my blog!
 # 头像里面的标题
-avatarTitle: R
+avatarTitle: H
 # 头像里面的描述
-avatarDesc: BIGDATA /Information security
+avatarDesc: JAVA&LifeStyle
 url: "https://ripperhxy.github.io/"
 
 # Comment
@@ -16,14 +16,14 @@ comment:
 # Social
 social:
     # weibo: 5366874726
-    github: admindian
-    twitter: Mr.Ruan
-    mail: Reasonruan@163.com
+    github: ripperhxy
+    twitter: Mr.RipperHXY
+    mail: 466799707@qq.com
 
 # 百度统计
 # 使用博客模板请去掉或者更换 id
 baidu:
-    id: 50ec7c4fd73b76593e02b70cfe1497e7
+    id: 4cee09928f6efaba04655ffd61981950
 
 # # Google Analytics
 # # 使用博客模板请去掉或者更换 id
