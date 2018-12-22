@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring Boot
-date: 2018-11-29
+date: 2018-12-22
 tags: java
 ---
 
@@ -69,7 +69,7 @@ public class HelloController {
 	@RequestMapping("/hello")
 	public String index() {
 		return "Hello World";
-	}	
+	}
 public static void main(String[] args) {
 		SpringApplication.run(HelloController.class, args);
 	}
@@ -119,11 +119,11 @@ Spring Boot默认提供静态资源目录位置需置于classpath下，目录名
 
 ### 全局捕获异常
 
-#### @ExceptionHandler 
+#### @ExceptionHandler
 
 表示拦截异常
 
-#### @ControllerAdvice 
+#### @ControllerAdvice
 
 是 controller 的一个辅助类，最常用的就是作为全局异常处理的切面类 可以指定扫描范围
 
@@ -477,7 +477,7 @@ public class DataSource1Config {
 		return bean.getObject();
 	}
 
-	
+
 	@Bean(name = "test1TransactionManager")
 	@Primary
 	public DataSourceTransactionManager testTransactionManager(@Qualifier("test1DataSource") DataSource dataSource) {
@@ -514,7 +514,7 @@ springboot默认集成事物,只主要在方法上加上@Transactional即可
 
 ```
 
-#### 新增配置文件信息	
+#### 新增配置文件信息
 
 ```properties
 # Mysql 1
@@ -789,7 +789,7 @@ application-prod.properties：生产环境
 
 ### 修改端口号
 
-server.port=8888 
+server.port=8888
 
 server.context-path=/hxy
 
@@ -801,11 +801,11 @@ server:
   context-path: /hxy
 ```
 
-冒号后面加空格 有提示 主流就用这个替代properties	
+冒号后面加空格 有提示 主流就用这个替代properties
 
 ### springboot打包
 
-选中项目点击右键show in Terminal 
+选中项目点击右键show in Terminal
 
 使用mvn package 打包
 
