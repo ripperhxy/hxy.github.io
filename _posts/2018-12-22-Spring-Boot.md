@@ -7,7 +7,7 @@ tags: java
 
 
 
-# SpringBoot(微服务)
+# SpringBoot
 
 ## SpringBoot（主流--安全）
 
