@@ -1162,3 +1162,35 @@ hystrix:
           timeoutInMilliseconds: 4000
 
 ```
+
+## 服务器集群之后会出现哪些问题
+
+1、分布式session问题（因为session存放在服务端，sessionId找不到对应的session）
+
+```
+方案一：直接使用cookie 替代 session 不靠谱 不安全
+方案二：使用nginx反向代理+ip绑定 同一个ip就相当于没有集群了
+方案三：使用数据库 要对数据库操作 效率不高
+方案四：tomcat内置支持对session同步（不推荐） 同步可能产生延迟
+方案五：spring-seesion框架 相当于把我们的session存在redis当中
+这个可以解决session在服务发布时失效的问题--转至redis博客
+方案六：可以同token替代session功能
+```
+
+2、分布式任务调度平台（服务器集群之后如何保证定时job的唯一性）幂等性
+
+​	做定时job后要打成war包分配到每一个服务器上，就容易造成同时运行同一个定时job
+
+3、分布式锁解决方案（全局id）
+
+基于zookeeper使用临时节点+事件通知
+
+基于redis setnx 缺点 ： 容易造成死锁、代码复杂
+
+springcloud对redison
+
+4、分布式日志手机问题
+
+elk
+
+5、分布式事物以及分布式配置中心与集群没有关系
